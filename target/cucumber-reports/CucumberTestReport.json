@@ -1,0 +1,99 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "Contact Us",
+        "description": "",
+        "id": "contact-us;contact-us",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 7768003500,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "Wchodze na strone glowna",
+            "match": {
+              "location": "StepDefinitions.wchodze_na_strone_glowna()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1152191600,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Wybieram opcje Contact Us",
+            "match": {
+              "location": "StepDefinitions.wybieram_opcje_contact_us()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 10461299800,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Wpisuje dane do kontaktu",
+            "match": {
+              "location": "StepDefinitions.wpisuje_dane_do_kontaktu(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "temat",
+                  "email",
+                  "order",
+                  "message"
+                ],
+                "line": 7
+              },
+              {
+                "cells": [
+                  "Webmaster",
+                  "testBDD@tt.pl",
+                  "WVNSTNVRY - 10/25/2019",
+                  "prosz o kontakt"
+                ],
+                "line": 8
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1399099300,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Wysylam email",
+            "match": {
+              "location": "StepDefinitions.wysylam_email()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 10,
+            "name": "Sprawdzam komunikat",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Contact Us",
+    "description": "",
+    "id": "contact-us",
+    "keyword": "Feature",
+    "uri": "src/test/resources/features/ContactUs.feature"
+  }
+]

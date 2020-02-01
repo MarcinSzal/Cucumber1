@@ -1,0 +1,29 @@
+package pl.com.aay.pageObject;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import pl.com.aay.seleniumEngine.SeleniumEngine;
+
+public class SignInPage extends CommonPage {
+
+	@FindBy(id="email_create")
+	private WebElement email;
+	@FindBy(id="SubmitCreate")
+	private WebElement createAccount;
+	
+	public SignInPage (WebDriver driver){
+		super(driver);
+		PageFactory.initElements(driver, this);
+	}
+	
+	public void createAccount (){
+		selenium.getWaitForElement().waitForElementToBeClickable(selenium.getWebDriver(), email, 5);
+		email.sendKeys("test@test.pl");
+		createAccount.click();
+	}
+
+}
